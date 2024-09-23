@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        @keyframes slide {
+           0%{
+                top: 0;
+                left: 0;
+               transform: translate(100px);
+            }
+             25%{
+                top: 0;
+                left: 100px;
+                 transform:rotate(20deg)skewY(30deg);
+            }
+            50%{
+                top: 0;
+                left: 200px;
+            }
+            75%{
+                top: 0;
+                left: 300px;
+            }
+            100%{
+                top: 0;
+                left: 400px;
+            }
+
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            /*align-items: center;*/
+            /*justify-content: center;*/
+        }
+        div {
+            width: 100px;
+            height: 100px;
+            color: red;
+            background: cadetblue;
+            margin: 10px;
+            border: 5px solid black;
+
+        }
+        .div1:hover{
+            animation: slide;
+            animation-duration:5s ;
+            position: relative;
+            background-color: orange;
+            text-transform:full-width;
+        }
+        .div2:hover{
+            transform: rotate3d(50,60,40,140deg) scale3d(150%,150%,150%);
+            background-color: orange;
+
+
+        }
+        .div3:hover{
+            transform: translate(100%)rotate(180deg)scale(1.25)skewX(50deg);
+            background-color: orange;
+            text-wrap: pretty;
+            border-radius: 20%;
+            transition:2s;
+            transition-timing-function: cubic-bezier(0.97,-.52,.4,1.24);
+        }
+        .div4:hover{
+            transform: skewY(30deg) translate(100px);
+            background-color: orange;
+            text-wrap: auto;
+        }
+        /*.span1:hover{*/
+        /*    transform:scale(2);*/
+        /*    font-size: 20px;*/
+        /*}*/
+    </style>
+</head>
+<body>
+<div class="div1"><span class="span1">good</span></div>
+<div class="div2">better</div>
+<div class="div3">best</div>
+<div class="div4">awesome</div>
+
+</body>
+</html>
